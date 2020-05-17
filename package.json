@@ -1,0 +1,43 @@
+{
+  "name": "alastor",
+  "version": "0.0.1",
+  "description": "Hellish-fast asynchronous HTTP client for node.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "del-cli dist && yarn pretty && rollup -c && yarn minify && del-cli dist/index-cjs.js && yarn test",
+    "minify": "uglifyjs dist/index-cjs.js --compress --mangle > dist/index.js",
+    "pretty": "prettier --write \"src/*.ts\"",
+    "test": "node test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aidenybai/alastor.git"
+  },
+  "keywords": [
+    "alastor",
+    "alastorjs",
+    "http",
+    "http-client",
+    "nodejs",
+    "client",
+    "asynchronous"
+  ],
+  "author": "Aiden Bai <aidenybai@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aidenybai/alastor/issues"
+  },
+  "homepage": "https://github.com/aidenybai/alastor",
+  "engines": {
+    "node": ">=6.4.0"
+  },
+  "devDependencies": {
+    "del-cli": "^2.0.0",
+    "prettier": "^1.18.2",
+    "rollup": "^1.17.0",
+    "rollup-plugin-typescript2": "^0.22.1",
+    "typescript": "^3.5.3",
+    "uglify-es": "^3.3.9"
+  }
+}

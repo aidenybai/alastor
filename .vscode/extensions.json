@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "mrmlnc.vscode-lebab",
+    "christian-kohler.npm-intellisense"
+  ]
+}
