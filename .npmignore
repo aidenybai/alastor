@@ -1,21 +1,17 @@
 # Packages
+.vscode/
 node_modules/
 yarn.lock
+yarn-error.log
 package-lock.json
-
-# Deploy
-test/
-.github/
-.travis.yml
 
 # License
 LICENSE.txt
+LICENSE
 
 # Config
-.eslintrc.json
-.eslintignore
-tsconfig.json
-tslint.json
+.prettierrc
+.prettierignore
 
 # Other
 .npmrc
