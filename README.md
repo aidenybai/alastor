@@ -5,7 +5,7 @@ Hellish-fast asynchronous HTTP client for node.js
 ## Install
 
 ```bash
-npm i alastor
+npm install alastor
 ```
 
 ### Quick Demos

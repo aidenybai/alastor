@@ -1,16 +1,16 @@
-const Request = require('./Request.js');
-const { URL } = require('url');
+import Request from './Request';
+import { URL } from 'url';
 
-const core = (url, method) => new Request(url, method);
+const core: any = (url: string, method: string) => new Request(url, method);
 
-const alastor = async (opts) => {
+const alastor: any = async (opts: any) => {
   if (typeof opts !== 'string') {
     if (!opts.hasOwnProperty('url')) {
       throw new Error('Missing url option from options for request method.');
     }
   }
 
-  const req = core(typeof opts === 'object' ? opts.url : opts, opts.method || 'GET');
+  const req: any = core(typeof opts === 'object' ? opts.url : opts, opts.method || 'GET');
 
   if (opts.headers) req.header(opts.headers);
   if (opts.stream) req.stream();
@@ -25,7 +25,7 @@ const alastor = async (opts) => {
     });
   }
 
-  const res = await req.send();
+  const res: any = await req.send();
 
   if (res.headers.hasOwnProperty('location') && opts.followRedirects) {
     opts.url = new URL(res.headers['location'], opts.url).toString();
@@ -50,20 +50,20 @@ const alastor = async (opts) => {
 
 alastor.promisified = alastor;
 
-alastor.unpromisified = (opts, cb) => {
+alastor.unpromisified = (opts: any, cb: any) => {
   alastor(opts)
-    .then((data) => {
+    .then((data: any) => {
       if (cb) cb(null, data);
     })
-    .catch((err) => {
+    .catch((err: any) => {
       if (cb) cb(err, null);
     });
 };
 
-alastor.defaults = (defaultOpts) => async (opts) => {
-  const nops = typeof opts === 'string' ? { url: opts } : opts;
+alastor.defaults = (defaultOpts: any) => async (opts: any) => {
+  const nops: any = typeof opts === 'string' ? { url: opts } : opts;
 
-  Object.keys(defaultOpts).forEach((doK) => {
+  Object.keys(defaultOpts).forEach((doK: any) => {
     if (!nops.hasOwnProperty(doK) || nops[doK] === null) {
       nops[doK] = defaultOpts[doK];
     }
@@ -72,4 +72,4 @@ alastor.defaults = (defaultOpts) => async (opts) => {
   return await alastor(nops);
 };
 
-module.exports = alastor;
+export default alastor;
