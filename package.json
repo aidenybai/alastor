@@ -1,8 +1,9 @@
 {
   "name": "alastor",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Hellish-fast asynchronous HTTP client for node.js",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "del-cli dist && rollup -c"
   },
