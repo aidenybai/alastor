@@ -1,6 +1,7 @@
+const Request = require('./Request.js');
 const { URL } = require('url');
-const Request = require('./Request');
-const http = (url, method) => new Request(url, method);
+
+const core = (url, method) => new Request(url, method);
 
 const alastor = async (opts) => {
   if (typeof opts !== 'string') {
@@ -9,7 +10,7 @@ const alastor = async (opts) => {
     }
   }
 
-  const req = http(typeof opts === 'object' ? opts.url : opts, opts.method || 'GET');
+  const req = core(typeof opts === 'object' ? opts.url : opts, opts.method || 'GET');
 
   if (opts.headers) req.header(opts.headers);
   if (opts.stream) req.stream();
@@ -17,7 +18,12 @@ const alastor = async (opts) => {
   if (opts.data) req.body(opts.data);
   if (opts.form) req.body(opts.form, 'form');
   if (opts.compression) req.compress();
-  if (opts.agent) req.option('agent', opts.agent);
+
+  if (typeof opts.core === 'object') {
+    Object.keys(opts.core).forEach((optName) => {
+      req.option(optName, opts.core[optName]);
+    });
+  }
 
   const res = await req.send();
 
@@ -38,9 +44,7 @@ const alastor = async (opts) => {
       res.coreRes.body = await res.json();
 
       return res.coreRes;
-    } else {
-      return res.coreRes;
-    }
+    } else return res.coreRes;
   }
 };
 
@@ -56,7 +60,16 @@ alastor.unpromisified = (opts, cb) => {
     });
 };
 
-alastor.defaults = (defaultOpts) => async (opts) =>
-  await alastor(Object.assign(defaultOpts, typeof opts === 'string' ? { url: opts } : opts));
+alastor.defaults = (defaultOpts) => async (opts) => {
+  const nops = typeof opts === 'string' ? { url: opts } : opts;
+
+  Object.keys(defaultOpts).forEach((doK) => {
+    if (!nops.hasOwnProperty(doK) || nops[doK] === null) {
+      nops[doK] = defaultOpts[doK];
+    }
+  });
+
+  return await alastor(nops);
+};
 
 module.exports = alastor;

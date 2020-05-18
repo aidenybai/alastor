@@ -43,32 +43,6 @@ const res = await alastor({
 console.log(res.body);
 ```
 
-KeepAlive agent
-
-```js
-const https = require('https');
-const keepAliveAgent = new https.Agent({ keepAlive: true });
-
-await alastor({
-  /* options */
-  agent: keepAliveAgent,
-});
-```
-
-Using HTTP proxy
-
-```js
-const HttpsProxyAgent = require('https-proxy-agent');
-
-const proxy = 'http://localhost:666';
-const agent = new HttpsProxyAgent(proxy);
-
-await alastor({
-  /* options */
-  agent: agent,
-});
-```
-
 ### Default Options
 
 ```js
