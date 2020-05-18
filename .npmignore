@@ -17,3 +17,8 @@ LICENSE
 .npmrc
 .gitignore
 .gitattributes
+
+# Javascript
+test.js
+rollup.config.js
+src/
