@@ -30,7 +30,7 @@ More examples can be found in [the examples folder](https://github.com/aidenybai
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | alastor    | [![alastor package size](https://packagephobia.now.sh/badge?p=alastor)](https://packagephobia.now.sh/result?p=alastor)          |
 | node-fetch | [![node-fetch package size](https://packagephobia.now.sh/badge?p=node-fetch)](https://packagephobia.now.sh/result?p=node-fetch) |
-| axios      | [![axios package size](https://packagephobia.now.sh/badge?p=axios)](https://packagephobia.now.sh/result?p=axios)                |  |
+| axios      | [![axios package size](https://packagephobia.now.sh/badge?p=axios)](https://packagephobia.now.sh/result?p=axios)                |
 | superagent | [![superagent package size](https://packagephobia.now.sh/badge?p=superagent)](https://packagephobia.now.sh/result?p=superagent) |
 | request    | [![request package size](https://packagephobia.now.sh/badge?p=request)](https://packagephobia.now.sh/result?p=request)          |
 
