@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "yarn build:src && yarn build:docs && node test",
+    "build": "yarn build:src && yarn build:docs",
     "build:src": "del-cli dist && rollup -c",
     "build:docs": "del-cli docs && typedoc --out docs src"
   },
