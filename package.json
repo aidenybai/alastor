@@ -7,7 +7,7 @@
   "scripts": {
     "build": "del-cli dist && rollup -c",
     "build:docs": "del-cli docs && typedoc --out docs src",
-    "prepublish": "yarn build && yarn build:docs && node test && npm publish"
+    "prepublishonly": "yarn build && yarn build:docs && node test"
   },
   "repository": {
     "type": "git",
