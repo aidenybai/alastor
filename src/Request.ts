@@ -8,6 +8,10 @@ import Response from './Response';
 
 const supportedCompressions: string[] = ['gzip', 'deflate'];
 
+/**
+ * Request class that interfaces with http
+ * @class
+ */
 export default class Request {
   public ['constructor']: typeof Request;
   public compressionEnabled: boolean;
@@ -18,9 +22,14 @@ export default class Request {
   public resOptions: any;
   public sendDataAs: any;
   public streamEnabled: boolean;
-  public timeoutTime: any;
+  public timeoutTime: number;
   public url: URL;
 
+  /**
+   * @param  {string} url
+   * @param  {string} method
+   * @returns this
+   */
   public constructor(url: string, method: string) {
     this.compressionEnabled = false;
     this.coreOptions = {};
@@ -29,7 +38,7 @@ export default class Request {
     this.reqHeaders = {};
     this.sendDataAs = null;
     this.streamEnabled = false;
-    this.timeoutTime = null;
+    this.timeoutTime = 0;
     this.url = typeof url === 'string' ? new URL(url) : url;
 
     this.resOptions = {
@@ -38,8 +47,11 @@ export default class Request {
 
     return this;
   }
-
-  public query(a1: any, a2: any) {
+  /**
+   * @param  {any} a1
+   * @param  {any} a2
+   */
+  public query(a1: any, a2: any): this {
     if (typeof a1 === 'object') {
       Object.keys(a1).forEach((queryKey) => {
         this.url.searchParams.append(queryKey, a1[queryKey]);
@@ -48,14 +60,20 @@ export default class Request {
 
     return this;
   }
-
-  public path(relativePath: any) {
+  /**
+   * @param  {any} relativePath
+   */
+  public path(relativePath: any): this {
     this.url.pathname = path.join(this.url.pathname, relativePath);
 
     return this;
   }
-
-  public body(data: any, sendAs?: any) {
+  /**
+   * @param  {any} data
+   * @param  {any} sendAs?
+   * @returns data
+   */
+  public body(data: any, sendAs?: any): this {
     this.sendDataAs =
       typeof data === 'object' && !sendAs && !Buffer.isBuffer(data)
         ? 'json'
@@ -71,8 +89,11 @@ export default class Request {
 
     return this;
   }
-
-  public header(key: any, val?: any) {
+  /**
+   * @param  {any} key
+   * @param  {any} val?
+   */
+  public header(key: any, val?: any): this {
     if (typeof key === 'object') {
       Object.keys(key).forEach((headerName: any) => {
         this.reqHeaders[headerName.toLowerCase()] = key[headerName];
@@ -81,26 +102,39 @@ export default class Request {
 
     return this;
   }
-
-  public timeout(timeout: number) {
+  /**
+   * @param  {number} timeout
+   * @returns this
+   */
+  public timeout(timeout: number): this {
     this.timeoutTime = timeout;
 
     return this;
   }
-
-  public option(name: any, value: any) {
+  /**
+   * @param  {any} name
+   * @param  {any} value
+   * @returns this
+   */
+  public option(name: any, value: any): this {
     this.coreOptions[name] = value;
 
     return this;
   }
 
-  public stream() {
+  /**
+   * @returns this
+   */
+  public stream(): this {
     this.streamEnabled = true;
 
     return this;
   }
 
-  public compress() {
+  /**
+   * @returns this
+   */
+  public compress(): this {
     this.compressionEnabled = true;
 
     if (!this.reqHeaders['accept-encoding'])
@@ -108,8 +142,10 @@ export default class Request {
 
     return this;
   }
-
-  public send() {
+  /**
+   * @returns Promise
+   */
+  public send(): Promise<Response> {
     return new Promise((resolve: any, reject: any) => {
       if (this.data) {
         if (!this.reqHeaders.hasOwnProperty('content-type')) {

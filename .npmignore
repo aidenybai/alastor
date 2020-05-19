@@ -24,4 +24,6 @@ tsconfig.json
 test.js
 rollup.config.js
 src/
+docs/
 examples/
+CNAME

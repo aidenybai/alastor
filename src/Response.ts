@@ -1,3 +1,7 @@
+/**
+ *
+ * @class
+ */
 export default class Response {
   public ['constructor']: typeof Response;
   public body: any;
@@ -7,6 +11,10 @@ export default class Response {
   public statusCode: number;
   public ok: boolean;
 
+  /**
+   * @param  {any} res
+   * @param  {any} resOptions
+   */
   public constructor(res: any, resOptions: any) {
     this.body = Buffer.alloc(0);
     this.coreRes = res;
@@ -16,15 +24,25 @@ export default class Response {
     this.ok = res.statusCode === 200;
   }
 
-  public _addChunk(chunk: any) {
+  /**
+   * @param  {any} chunk
+   * @returns void
+   */
+  public _addChunk(chunk: any): void {
     this.body = Buffer.concat([this.body, chunk]);
   }
 
-  public async json() {
+  /**
+   * @returns Promise
+   */
+  public async json(): Promise<any> {
     return JSON.parse(this.body);
   }
 
-  public async text() {
+  /**
+   * @returns Promise
+   */
+  public async text(): Promise<string> {
     return this.body.toString();
   }
 }

@@ -1,0 +1,169 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>alastor</title>
+	<meta name="description" content="Documentation for alastor">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">alastor</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>alastor</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#alastor---" id="alastor---" style="color: inherit; text-decoration: none;">
+					<h1>Alastor <img src="https://badgen.net/npm/v/alastor?color=red&style=flat"> <img src="https://badgen.net/npm/dt/alastor?color=red&style=flat"> <img src="https://badgen.net/packagephobia/install/alastor?color=red&style=flat"></h1>
+				</a>
+				<p>Hellish-fast asynchronous HTTP client for node.js</p>
+				<a href="#installing" id="installing" style="color: inherit; text-decoration: none;">
+					<h2>Installing</h2>
+				</a>
+				<p>You will need NodeJS 8+. Refer to the Getting Started section to for quick start.</p>
+				<pre><code class="language-bash">npm install alastor</code></pre>
+				<a href="#simple-example" id="simple-example" style="color: inherit; text-decoration: none;">
+					<h2>Simple Example</h2>
+				</a>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> alastor = <span class="hljs-built_in">require</span>(<span class="hljs-string">'alastor'</span>);
+
+alastor(<span class="hljs-string">'https://example.com'</span>)
+  .then(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> res.text())
+  .then(<span class="hljs-function">(<span class="hljs-params">body</span>) =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(body);
+  });</code></pre>
+				<p>More examples can be found in <a href="https://github.com/aidenybai/alastor/tree/master/examples">the examples folder</a>.</p>
+				<a href="#size-comparisons" id="size-comparisons" style="color: inherit; text-decoration: none;">
+					<h2>Size Comparisons</h2>
+				</a>
+				<table>
+					<thead>
+						<tr>
+							<th>Package</th>
+							<th>Size</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td>alastor</td>
+							<td><a href="https://packagephobia.now.sh/result?p=alastor"><img src="https://packagephobia.now.sh/badge?p=alastor" alt="alastor package size"></a></td>
+						</tr>
+						<tr>
+							<td>node-fetch</td>
+							<td><a href="https://packagephobia.now.sh/result?p=node-fetch"><img src="https://packagephobia.now.sh/badge?p=node-fetch" alt="node-fetch package size"></a></td>
+						</tr>
+						<tr>
+							<td>axios</td>
+							<td><a href="https://packagephobia.now.sh/result?p=axios"><img src="https://packagephobia.now.sh/badge?p=axios" alt="axios package size"></a></td>
+						</tr>
+						<tr>
+							<td>superagent</td>
+							<td><a href="https://packagephobia.now.sh/result?p=superagent"><img src="https://packagephobia.now.sh/badge?p=superagent" alt="superagent package size"></a></td>
+						</tr>
+						<tr>
+							<td>request</td>
+							<td><a href="https://packagephobia.now.sh/result?p=request"><img src="https://packagephobia.now.sh/badge?p=request" alt="request package size"></a></td>
+						</tr>
+				</tbody></table>
+				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+					<h2>License</h2>
+				</a>
+				<p>Refer to the <a href="LICENSE">LICENSE</a> file.</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_request_.html">&quot;<wbr>Request&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_response_.html">&quot;<wbr>Response&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_index_.html">&quot;index&quot;</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

@@ -1,9 +1,11 @@
-import { URL } from 'url';
 import Request from './Request';
 
 const fetch: any = (url: string, method: string) => new Request(url, method);
 
-const Alastor: any = async (opts: any) => {
+/**
+ * @param  {any} opts
+ */
+export default async (opts: any) => {
   if (typeof opts !== 'string') {
     if (!opts.hasOwnProperty('url')) {
       throw new Error('Missing url option from options for request method.');
@@ -27,5 +29,3 @@ const Alastor: any = async (opts: any) => {
 
   return req.send();
 };
-
-export default Alastor;
