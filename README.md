@@ -26,10 +26,10 @@ npm install alastor
 
 ```js
 // Require using ES6 syntax
-import Alastor from 'glitch-api';
+import Alastor from 'alastor';
 
 // Or using old fancy style
-const Alastor = require('glitch-api');
+const Alastor = require('alastor');
 
 // async based implementation
 (async () => {
