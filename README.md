@@ -2,9 +2,21 @@
 
 Hellish-fast asynchronous HTTP client for node.js
 
+| 📖 [Documentation](https://alastor.js.org/globals) | ✨ [Examples](https://github.com/aidenybai/alastor/tree/master/examples) |
+| -------------------------------------------------- | ------------------------------------------------------------------------ |
+
+
+## Features
+
+- ~**12kb** size ([smaller than the competition](#size-comparisons))
+- Uses **TypeScript** that provides hints in editor, type checking, etc.
+- **node-fetch** like API.
+- No dependencies
+- Class abstraction
+
 ## Installing
 
-You will need NodeJS 8+. Refer to the Getting Started section to for quick start.
+> **[Node.js](https://nodejs.org/) 8.0.0 or newer is required**
 
 ```bash
 npm install alastor
@@ -13,12 +25,26 @@ npm install alastor
 ## Simple Example
 
 ```js
-const alastor = require('alastor');
+// Require using ES6 syntax
+import Alastor from 'glitch-api';
 
+// Or using old fancy style
+const Alastor = require('glitch-api');
+
+// async based implementation
+(async () => {
+  const res = await alastor('https://example.com');
+  const body = await res.text();
+})();
+
+// .then based implementation
 alastor('https://example.com')
   .then((res) => res.text())
   .then((body) => {
     console.log(body);
+  })
+  .catch((err) => {
+    console.error(err);
   });
 ```
 

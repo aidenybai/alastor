@@ -5,9 +5,9 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "del-cli dist && rollup -c",
-    "build:docs": "del-cli docs && typedoc --out docs src",
-    "prepublishonly": "yarn build && yarn build:docs && node test"
+    "build": "yarn build:src && yarn build:docs && node test",
+    "build:src": "del-cli dist && rollup -c",
+    "build:docs": "del-cli docs && typedoc --out docs src"
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/aidenybai/alastor/issues"
   },
-  "homepage": "https://github.com/aidenybai/alastor",
+  "homepage": "https://alastor.js.org",
   "engines": {
     "node": ">=6.4.0"
   },
