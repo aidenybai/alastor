@@ -1,18 +1,16 @@
 export default class Response {
-  public coreRes: any;
-  public resOptions: any;
-  public body: any;
-  public headers: any;
-  public statusCode: any;
   public ['constructor']: typeof Response;
+  public body: any;
+  public coreRes: any;
+  public headers: any;
+  public resOptions: any;
+  public statusCode: any;
 
   public constructor(res: any, resOptions: any) {
-    this.coreRes = res;
-    this.resOptions = resOptions;
-
     this.body = Buffer.alloc(0);
-
+    this.coreRes = res;
     this.headers = res.headers;
+    this.resOptions = resOptions;
     this.statusCode = res.statusCode;
   }
 

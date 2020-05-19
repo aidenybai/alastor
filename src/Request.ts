@@ -9,31 +9,31 @@ import Response from './Response';
 const supportedCompressions: string[] = ['gzip', 'deflate'];
 
 export default class Request {
-  public url: URL;
-  public method: string;
-  public data: any;
-  public sendDataAs: any;
-  public reqHeaders: any;
-  public streamEnabled: boolean;
-  public compressionEnabled: boolean;
-  public timeoutTime: any;
-  public coreOptions: any;
-  public resOptions: any;
   public ['constructor']: typeof Request;
+  public compressionEnabled: boolean;
+  public coreOptions: any;
+  public data: any;
+  public method: string;
+  public reqHeaders: any;
+  public resOptions: any;
+  public sendDataAs: any;
+  public streamEnabled: boolean;
+  public timeoutTime: any;
+  public url: URL;
 
   public constructor(url: string, method: string) {
-    this.url = typeof url === 'string' ? new URL(url) : url;
-    this.method = method || 'GET';
-    this.data = null;
-    this.sendDataAs = null;
-    this.reqHeaders = {};
-    this.streamEnabled = false;
     this.compressionEnabled = false;
-    this.timeoutTime = null;
     this.coreOptions = {};
+    this.data = null;
+    this.method = method || 'GET';
+    this.reqHeaders = {};
+    this.sendDataAs = null;
+    this.streamEnabled = false;
+    this.timeoutTime = null;
+    this.url = typeof url === 'string' ? new URL(url) : url;
 
     this.resOptions = {
-      maxBuffer: 50 * 1000000, // 50 MB
+      maxBuffer: 50 * 1000000,
     };
 
     return this;
@@ -72,12 +72,12 @@ export default class Request {
     return this;
   }
 
-  public header(a1: any, a2?: any) {
-    if (typeof a1 === 'object') {
-      Object.keys(a1).forEach((headerName: any) => {
-        this.reqHeaders[headerName.toLowerCase()] = a1[headerName];
+  public header(key: any, val?: any) {
+    if (typeof key === 'object') {
+      Object.keys(key).forEach((headerName: any) => {
+        this.reqHeaders[headerName.toLowerCase()] = key[headerName];
       });
-    } else this.reqHeaders[a1.toLowerCase()] = a2;
+    } else this.reqHeaders[key.toLowerCase()] = val;
 
     return this;
   }

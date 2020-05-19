@@ -12,6 +12,7 @@ LICENSE
 # Config
 .prettierrc
 .prettierignore
+tsconfig.json
 
 # Other
 .npmrc
@@ -22,3 +23,4 @@ LICENSE
 test.js
 rollup.config.js
 src/
+examples/
