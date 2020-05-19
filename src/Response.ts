@@ -4,7 +4,8 @@ export default class Response {
   public coreRes: any;
   public headers: any;
   public resOptions: any;
-  public statusCode: any;
+  public statusCode: number;
+  public ok: boolean;
 
   public constructor(res: any, resOptions: any) {
     this.body = Buffer.alloc(0);
@@ -12,6 +13,7 @@ export default class Response {
     this.headers = res.headers;
     this.resOptions = resOptions;
     this.statusCode = res.statusCode;
+    this.ok = res.statusCode === 200;
   }
 
   public _addChunk(chunk: any) {

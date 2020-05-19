@@ -1,4 +1,5 @@
 # Packages
+.github/
 .vscode/
 node_modules/
 yarn.lock

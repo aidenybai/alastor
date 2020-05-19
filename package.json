@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "del-cli dist && rollup -c"
+    "build": "del-cli dist && rollup -c",
+    "full-publish": "yarn build && node test && npm publish"
   },
   "repository": {
     "type": "git",

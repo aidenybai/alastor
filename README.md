@@ -1,6 +1,6 @@
 # Alastor <img src="https://badgen.net/npm/v/alastor?color=red&style=flat"> <img src="https://badgen.net/npm/dt/alastor?color=red&style=flat"> <img src="https://badgen.net/packagephobia/install/alastor?color=red&style=flat">
 
-Zero-bloat demonic HTTP client for NodeJS
+Hellish-fast asynchronous HTTP client for node.js
 
 ## Installing
 
