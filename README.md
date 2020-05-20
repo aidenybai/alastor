@@ -1,12 +1,6 @@
-<a href="https://alastor.js.org/">
-  <img src="https://github.com/aidenybai/alastor/blob/master/media/logo.png" width="100px" align="right" />
-</a>
+# Alastor <img src="https://badgen.net/npm/v/alastor?color=red&style=flat"> <img src="https://badgen.net/npm/dt/alastor?color=red&style=flat"> <img src="https://badgen.net/packagephobia/install/alastor?color=red&style=flat">
 
-# Alastor
-
-<img src="https://badgen.net/npm/v/alastor?color=red&style=flat"> <img src="https://badgen.net/npm/dt/alastor?color=red&style=flat"> <img src="https://badgen.net/packagephobia/install/alastor?color=red&style=flat">
-
-Hellish-fast asynchronous HTTP client for node.js
+Hellish-fast asynchronous HTTP client for NodeJS
 
 | 📖 [Documentation](https://alastor.js.org/globals) | ✨ [Examples](https://github.com/aidenybai/alastor/tree/master/examples) |
 | -------------------------------------------------- | ------------------------------------------------------------------------ |
@@ -58,13 +52,14 @@ More examples can be found in [the examples folder](https://github.com/aidenybai
 
 ## Size Comparisons
 
-| Package    | Size                                                                                                                            |
+Alastor is designed to be as light-weight as possible but also have a programmatically powerful API.
+| Package | Size |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| alastor    | [![alastor package size](https://packagephobia.now.sh/badge?p=alastor)](https://packagephobia.now.sh/result?p=alastor)          |
+| alastor | [![alastor package size](https://packagephobia.now.sh/badge?p=alastor)](https://packagephobia.now.sh/result?p=alastor) |
 | node-fetch | [![node-fetch package size](https://packagephobia.now.sh/badge?p=node-fetch)](https://packagephobia.now.sh/result?p=node-fetch) |
-| axios      | [![axios package size](https://packagephobia.now.sh/badge?p=axios)](https://packagephobia.now.sh/result?p=axios)                |
+| axios | [![axios package size](https://packagephobia.now.sh/badge?p=axios)](https://packagephobia.now.sh/result?p=axios) |
 | superagent | [![superagent package size](https://packagephobia.now.sh/badge?p=superagent)](https://packagephobia.now.sh/result?p=superagent) |
-| request    | [![request package size](https://packagephobia.now.sh/badge?p=request)](https://packagephobia.now.sh/result?p=request)          |
+| request | [![request package size](https://packagephobia.now.sh/badge?p=request)](https://packagephobia.now.sh/result?p=request) |
 
 ## License
 
