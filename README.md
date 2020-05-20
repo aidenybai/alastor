@@ -1,4 +1,10 @@
-# Alastor <img src="https://badgen.net/npm/v/alastor?color=red&style=flat"> <img src="https://badgen.net/npm/dt/alastor?color=red&style=flat"> <img src="https://badgen.net/packagephobia/install/alastor?color=red&style=flat">
+<a href="https://alastor.js.org/">
+  <img src="https://github.com/aidenybai/alastor/blob/master/media/logo.png" width="100px" align="right" />
+</a>
+
+# Alastor
+
+<img src="https://badgen.net/npm/v/alastor?color=red&style=flat"> <img src="https://badgen.net/npm/dt/alastor?color=red&style=flat"> <img src="https://badgen.net/packagephobia/install/alastor?color=red&style=flat">
 
 Hellish-fast asynchronous HTTP client for node.js
 

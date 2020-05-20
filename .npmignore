@@ -26,4 +26,5 @@ rollup.config.js
 src/
 docs/
 examples/
+media/
 CNAME
