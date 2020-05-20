@@ -7,7 +7,7 @@
   "scripts": {
     "build": "yarn build:src && yarn build:docs",
     "build:src": "del-cli dist && rollup -c",
-    "build:docs": "typedoc --target ES6 --theme minimal --out docs src"
+    "build:docs": "typedoc --out docs src"
   },
   "repository": {
     "type": "git",

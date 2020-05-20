@@ -2,15 +2,15 @@
 
 Hellish-fast asynchronous HTTP client for NodeJS
 
-| 📖 [Documentation](https://alastor.js.org/globals) | ✨ [Examples](https://github.com/aidenybai/alastor/tree/master/examples) |
-| -------------------------------------------------- | ------------------------------------------------------------------------ |
+| 📖 [Documentation](https://alastor.js.org/globals) | ✨ [Examples](https://github.com/aidenybai/alastor/tree/master/examples) | 🖥️ [Github](https://github.com/aidenybai/alastor/) |
+| -------------------------------------------------- | ------------------------------------------------------------------------ | -------------------------------------------------- |
 
 
 ## Features
 
 - ~**12kb** size ([smaller than the competition](#size-comparisons))
 - Uses **TypeScript** that provides hints in editor, type checking, etc.
-- **node-fetch** like API.
+- Asynchronous, allowing both .then chaining and async/await
 - No dependencies
 - Class abstraction
 
@@ -55,11 +55,11 @@ More examples can be found in [the examples folder](https://github.com/aidenybai
 Alastor is designed to be as light-weight as possible but also have a programmatically powerful API.
 | Package | Size |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| alastor | [![alastor package size](https://packagephobia.now.sh/badge?p=alastor)](https://packagephobia.now.sh/result?p=alastor) |
-| node-fetch | [![node-fetch package size](https://packagephobia.now.sh/badge?p=node-fetch)](https://packagephobia.now.sh/result?p=node-fetch) |
-| axios | [![axios package size](https://packagephobia.now.sh/badge?p=axios)](https://packagephobia.now.sh/result?p=axios) |
-| superagent | [![superagent package size](https://packagephobia.now.sh/badge?p=superagent)](https://packagephobia.now.sh/result?p=superagent) |
-| request | [![request package size](https://packagephobia.now.sh/badge?p=request)](https://packagephobia.now.sh/result?p=request) |
+| alastor | [![alastor package size](https://badgen.net/packagephobia/install/alastor?style=flat)](https://packagephobia.now.sh/result?p=alastor) |
+| node-fetch | [![node-fetch package size](https://badgen.net/packagephobia/install/node-fetch?style=flat)](https://packagephobia.now.sh/result?p=node-fetch) |
+| axios | [![axios package size](https://badgen.net/packagephobia/install/axios?style=flat)](https://packagephobia.now.sh/result?p=axios) |
+| superagent | [![superagent package size](https://badgen.net/packagephobia/install/superagent?style=flat)](https://packagephobia.now.sh/result?p=superagent) |
+| request | [![request package size](https://badgen.net/packagephobia/install/request?style=flat)](https://packagephobia.now.sh/result?p=request) |
 
 ## License
 
