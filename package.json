@@ -1,6 +1,6 @@
 {
   "name": "alastor",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Hellish-fast asynchronous HTTP client for NodeJS",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

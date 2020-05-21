@@ -7,8 +7,6 @@ alastor({
     // (https://nodejs.org/api/http.html#http_http_request_url_options_callback)
     agent: userAgent,
   },
-})
-  .then((res) => res.text())
-  .then((body) => {
-    console.log(body);
-  });
+}).then((res) => {
+  console.log(res.body);
+});

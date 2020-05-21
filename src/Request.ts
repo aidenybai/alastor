@@ -25,7 +25,7 @@ class Request {
     this.compressionEnabled = false;
     this.coreOptions = {};
     this.data = null;
-    this.method = method || 'GET';
+    this.method = method.toUpperCase() || 'GET';
     this.reqHeaders = {};
     this.sendDataAs = null;
     this.streamEnabled = false;

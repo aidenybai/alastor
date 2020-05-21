@@ -33,15 +33,18 @@ const Alastor = require('alastor');
 
 // async based implementation
 (async () => {
-  const res = await alastor('https://example.com');
-  const body = await res.text();
+  try {
+    const res = await alastor('https://example.com');
+    console.log(res.body);
+  } catch (err) {
+    console.error(err);
+  }
 })();
 
 // .then based implementation
 alastor('https://example.com')
-  .then((res) => res.text())
-  .then((body) => {
-    console.log(body);
+  .then((res) => {
+    console.log(res.body);
   })
   .catch((err) => {
     console.error(err);

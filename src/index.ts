@@ -24,7 +24,27 @@ const Alastor = async (opts: any): Promise<Response> => {
     });
   }
 
-  return req.send();
+  const res = await req.send();
+
+  if (res.headers.hasOwnProperty('location') && opts.followRedirects) {
+    opts.url = new URL(res.headers['location'], opts.url).toString();
+
+    return await Alastor(opts);
+  }
+
+  if (opts.stream) {
+    res.stream = res;
+
+    return res;
+  } else {
+    res.coreRes.body = res.body;
+
+    if (opts.format && opts.format === 'json') {
+      res.coreRes.body = await res.json();
+
+      return res.coreRes;
+    } else return res.coreRes;
+  }
 };
 
 export default Alastor;

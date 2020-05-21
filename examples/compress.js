@@ -4,8 +4,6 @@ alastor({
   url: 'https://example.com/',
   method: 'GET',
   compress: true,
-})
-  .then((res) => res.text())
-  .then((body) => {
-    console.log(body);
-  });
+}).then((res) => {
+  console.log(res.body);
+});
