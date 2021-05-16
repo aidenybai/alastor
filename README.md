@@ -1,3 +1,5 @@
+> This was originally a TypeScript port with extra features of [`centra`](https://github.com/ethanent/centra). **Please do not use this package**, use [`centra`](https://github.com/ethanent/centra) for a maintained version.
+
 # Alastor <img src="https://badgen.net/npm/v/alastor?color=red&style=flat"> <img src="https://badgen.net/npm/dt/alastor?color=red&style=flat"> <img src="https://badgen.net/packagephobia/install/alastor?color=red&style=flat">
 
 Hellish-fast asynchronous HTTP client for NodeJS
